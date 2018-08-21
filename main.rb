@@ -1,20 +1,22 @@
-require 'sinatra'
-require 'sinatra/reloader'
-require 'csv'
-require 'time'
+# frozen_string_literal: true
 
-get '/' do
+require "sinatra"
+require "sinatra/reloader"
+require "csv"
+require "time"
+
+get "/" do
   @title = "Top | MemoApp"
   @indextitles = CSV.read("data/notes.csv", headers: true)
   erb :index
 end
 
-get '/new' do
+get "/new" do
   @title = "New | MemoApp"
   erb :new
 end
 
-get '/:id/edit' do
+get "/:id/edit" do
   @title = "Edit | MemoApp"
   table = CSV.read("data/notes.csv", headers: true)
   @post = table.find do |row|
@@ -23,7 +25,7 @@ get '/:id/edit' do
   erb :edit
 end
 
-get '/:id' do
+get "/:id" do
   table = CSV.read("data/notes.csv", headers: true)
   @post = table.find do |row|
     params[:id] == row["postnumber"]
@@ -34,7 +36,7 @@ get '/:id' do
   erb :show
 end
 
-post '/new' do
+post "/new" do
   posttime = SecureRandom.urlsafe_base64(8)
 
   @postnumber = posttime
@@ -44,11 +46,11 @@ post '/new' do
   CSV.open("data/notes.csv", "a") do |csv|
     csv << [@postnumber, @newposttitle, @newpost]
   end
-  redirect to('/')
+  redirect to("/")
   erb :index
 end
 
-patch '/:id/edit' do
+patch "/:id/edit" do
   @title = "Edit | MemoApp"
   @newpost = params[:newpost]
   @newposttitle = params[:newposttitle]
@@ -67,7 +69,7 @@ patch '/:id/edit' do
   erb :show
 end
 
-delete '/:id' do
+delete "/:id" do
   post = CSV.read("data/notes.csv")
   index = post.index do |row|
     row[0] == params[:id]
@@ -79,6 +81,6 @@ delete '/:id' do
     end
   end
 
-  redirect to('/')
+  redirect to("/")
   erb :index
-end 
+end
