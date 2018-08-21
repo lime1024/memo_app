@@ -1,0 +1,8 @@
+<div class=post-item>
+  <a href="/new" class="post-item__new-submit" >New</a>
+</div>
+<ul class=post-list>
+<% @indextitles.each do |row| %>
+  <li><a href=<%= "/#{row["postnumber"]}" %> class="post-link"><%= row["newposttitle"] %></a></li>
+<% end %>
+</ul>

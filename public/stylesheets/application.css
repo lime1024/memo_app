@@ -1,0 +1,262 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+/* layout */
+html {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Helvetica Neue",
+        "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo",
+        sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Hiragino kaku Gothic Pro";
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #89c997;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+footer {
+  background-color: #89c997;
+  margin-top: auto;
+}
+
+.author {
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+/* index */
+.post-link { 
+  margin-bottom: 0.5rem;
+  color: #696969;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.title {
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.post-item__new-submit {
+  color: white;
+  float: right;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  background-color: #89c997;
+  border-radius: 6px;
+  width: 7.6rem;
+  text-align: center;
+}
+
+.post-list {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+/* new */
+::placeholder {
+  color: #d3d3d3; }
+
+.new_post-form-title{
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.new_post-form-title-input {
+  width: 10rem;
+  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  border: 0.3rem solid #89c997; 
+  outline: 0;
+  -webkit-appearance: none;
+  font-size: 1.2rem;
+}
+
+.new_post-form-post {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.new_post-form-post-input {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  border-color: #89c997;
+  border-width: 0.3rem;
+  outline: 0;
+  font-size: 1.2rem;
+}
+
+.new_post-form-submit {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.new_post-form-submit-input {
+  border-radius: 6px;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: #89c997;
+  border-radius: 6px;
+  outline: 0;
+  font-size: 1.2rem;
+  width: 11.6rem;
+  height: 3.8rem;
+}
+.new_post-form-submit-input:hover {
+  text-decoration: underline;
+}  
+/* edit */
+.post-item__title-textarea {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.post-item__title-textarea-input {
+  width: 10rem;
+  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  border: 0.3rem solid #89c997; 
+  outline: 0;
+  font-size: 1.2rem;
+  color: #696969;
+}
+
+.post-item__post-textarea {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.post-item__post-textarea-input {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  border-color: #89c997;
+  border-width: 0.3rem;
+  outline: 0;
+  font-size: 1.2rem;
+  color: #696969;
+}
+
+.post-item__edit-submit {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.post-item__edit-submit-input {
+  border-radius: 6px;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: #89c997;
+  border-radius: 6px;
+  outline: 0;
+  font-size: 1.2rem;
+  width: 11.6rem;
+  height: 3.8rem;
+}
+
+.post-item__edit-submit-input:hover {
+  text-decoration: underline;
+} 
+
+/* show */
+.show_post-title {
+  color: #696969;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 20rem;
+  padding: 0.5rem 0.5rem;
+  border: 0.3rem solid #89c997;
+  border-style: none none dotted none; 
+  font-size: 1.2rem;
+}
+
+.show_post {
+  color: #696969;
+  margin-left: 2rem;
+  height: 10rem;
+  width: 20rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+.show_post-submit {
+  color: white;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 1rem 2rem;
+  background-color: #89c997;
+  border-radius: 6px;
+  width: 7.6rem;
+  text-align: center;
+}
+
+.show_post-submit-link {
+  color: white;
+}
+
+.show_post-delete {
+  margin-top: 1rem;
+  margin-left: 2rem; 
+}
+
+.show_post-delete-input {
+  border-radius: 6px;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: #ff6347;
+  border-color: #ff6347;
+  border-radius: 6px;
+  outline: 0;
+  font-size: 1.2rem;
+  width: 11.6rem;
+  height: 3.8rem;
+}
+.show_post-delete-input:hover {
+  text-decoration: underline;
+} 

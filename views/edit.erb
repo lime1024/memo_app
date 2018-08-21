@@ -1,0 +1,16 @@
+<div class=post-item>
+<form action="/<%= @post["postnumber"] %>/edit" method="POST">
+  <ul>
+    <li class="post-item__title-textarea">
+      <input type="text" value="<%= @post["newposttitle"] %>" name="newposttitle" class="post-item__title-textarea-input" placeholder="title" >
+    </li>
+    <li class="post-item__post-textarea">
+      <textarea name="newpost" class="post-item__post-textarea-input" placeholder="text" ><%= @post["newpost"] %></textarea>
+    </li>
+    <li class="post-item__edit-submit">
+      <input type="submit" value="Post" name="modify" class="post-item__edit-submit-input">
+      <input type="hidden" name="_method" value="patch">
+    </li>
+  <ul>
+</form>
+</div>
